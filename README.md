@@ -1,5 +1,5 @@
 # Project Title
-Courier Management (Auth & Role Management Module)
+Courier Management System(Auth & Role Management Module)
 
 ## Overview
 This is a Spring Boot backend project currently focused on authentication and role-based user management for a courier system.  
