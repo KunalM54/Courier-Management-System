@@ -1,4 +1,4 @@
-package com.example.CourierManagement;
+package com.example.couriermanagementsystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

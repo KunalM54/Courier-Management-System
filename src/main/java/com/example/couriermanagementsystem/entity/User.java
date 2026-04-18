@@ -1,6 +1,6 @@
-package com.example.CourierManagement.entity;
+package com.example.couriermanagementsystem.entity;
 
-import com.example.CourierManagement.enums.UserRole;
+import com.example.couriermanagementsystem.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,8 +1,9 @@
-package com.example.CourierManagement.controller;
+package com.example.couriermanagementsystem.controller;
 
-import com.example.CourierManagement.dto.RegisterRequest;
-import com.example.CourierManagement.enums.UserRole;
-import com.example.CourierManagement.service.AuthService;
+import com.example.couriermanagementsystem.dto.ApiResponse;
+import com.example.couriermanagementsystem.dto.RegisterRequest;
+import com.example.couriermanagementsystem.enums.UserRole;
+import com.example.couriermanagementsystem.service.AuthService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,13 +22,13 @@ public class AdminController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create-manager")
-    public String createManager(@RequestBody RegisterRequest request) {
+    public ApiResponse<Void> createManager(@RequestBody RegisterRequest request) {
         return authService.createUserByAdmin(request, UserRole.MANAGER);
     }
 
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create-agent")
-    public String createAgent(@RequestBody RegisterRequest request) {
+    public ApiResponse<Void> createAgent(@RequestBody RegisterRequest request) {
         return authService.createUserByAdmin(request, UserRole.DELIVERY_AGENT);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.CourierManagement;
+package com.example.couriermanagementsystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

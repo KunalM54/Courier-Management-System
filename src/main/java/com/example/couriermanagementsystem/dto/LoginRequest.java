@@ -1,4 +1,4 @@
-package com.example.CourierManagement.dto;
+package com.example.couriermanagementsystem.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

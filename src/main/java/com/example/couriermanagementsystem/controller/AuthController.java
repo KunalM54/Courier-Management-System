@@ -1,8 +1,10 @@
-package com.example.CourierManagement.controller;
+package com.example.couriermanagementsystem.controller;
 
-import com.example.CourierManagement.dto.LoginRequest;
-import com.example.CourierManagement.dto.RegisterRequest;
-import com.example.CourierManagement.service.AuthService;
+import com.example.couriermanagementsystem.dto.ApiResponse;
+import com.example.couriermanagementsystem.dto.AuthResponse;
+import com.example.couriermanagementsystem.dto.LoginRequest;
+import com.example.couriermanagementsystem.dto.RegisterRequest;
+import com.example.couriermanagementsystem.service.AuthService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,14 +20,13 @@ public class AuthController {
         this.authService = authService;
     }
 
-    // PUBLIC REGISTER (CUSTOMER ONLY)
     @PostMapping("/register")
-    public String register(@RequestBody RegisterRequest request) {
+    public ApiResponse<Void> register(@RequestBody RegisterRequest request) {
         return authService.registerCustomer(request);
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody LoginRequest request) {
+    public ApiResponse<AuthResponse> login(@RequestBody LoginRequest request) {
         return authService.login(request);
     }
 }
